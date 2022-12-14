@@ -51,6 +51,16 @@ export class  FetchApiDataService {
       .pipe(map(this.extractResponseData),catchError(this.handleError));
   }
 
+  getDirector(Name: string): Observable<any> {
+    const token = localStorage.getItem('token');
+    return this.http
+      .get(`${apiUrl}movies/directors/${Name}`, {
+        headers: new HttpHeaders(
+        {Authorization: 'Bearer ' + token})
+      })
+      .pipe(map(this.extractResponseData),catchError(this.handleError));
+  }
+
   private handleError(error: HttpErrorResponse): any {
       if (error.error instanceof ErrorEvent) {
       console.error('Some error occurred:', error.error.message);
