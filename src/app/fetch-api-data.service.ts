@@ -81,6 +81,50 @@ export class  FetchApiDataService {
       .pipe(map(this.extractResponseData),catchError(this.handleError));
   }
 
+  addFavoriteMovie(movieID: string): Observable<any> {
+    const token = localStorage.getItem('token');
+    const username = localStorage.getItem('username');
+    return this.http
+      .post(`${apiUrl}users/${username}/movies/${movieID}`, {
+        headers: new HttpHeaders(
+        {Authorization: 'Bearer ' + token})
+      })
+      .pipe(map(this.extractResponseData),catchError(this.handleError));
+  }
+
+  deleteFavoriteMovie(movieID: string): Observable<any> {
+    const token = localStorage.getItem('token');
+    const username = localStorage.getItem('username');
+    return this.http
+      .delete(`${apiUrl}users/${username}/movies/${movieID}`, {
+        headers: new HttpHeaders(
+        {Authorization: 'Bearer ' + token})
+      })
+      .pipe(map(this.extractResponseData),catchError(this.handleError));
+  }
+
+  editUser(updatedUserDetails: any): Observable<any> {
+    const token = localStorage.getItem('token');
+    const username = localStorage.getItem('username');
+    return this.http
+      .put(`${apiUrl}users/${username}`, updatedUserDetails, {
+        headers: new HttpHeaders(
+        {Authorization: 'Bearer ' + token})
+      })
+      .pipe(map(this.extractResponseData),catchError(this.handleError));
+  }
+
+  deleteUser(): Observable<any> {
+    const token = localStorage.getItem('token');
+    const username = localStorage.getItem('username');
+    return this.http
+      .delete(`${apiUrl}users/${username}`, {
+        headers: new HttpHeaders(
+        {Authorization: 'Bearer ' + token})
+      })
+      .pipe(map(this.extractResponseData),catchError(this.handleError));
+  }
+
   private handleError(error: HttpErrorResponse): any {
       if (error.error instanceof ErrorEvent) {
       console.error('Some error occurred:', error.error.message);
