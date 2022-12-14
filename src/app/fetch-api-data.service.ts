@@ -9,7 +9,7 @@ const apiUrl = 'https://favmovie-schen.herokuapp.com/';
   providedIn: 'root'
 })
 
-export class  FetchApiDataService {
+export class FetchApiDataService {
   // Inject the HttpClient module to the constructor params
  // This will provide HttpClient to the entire class, making it available via this.http
   constructor(private http: HttpClient) {}
@@ -139,7 +139,7 @@ export class  FetchApiDataService {
 
   
 // Non-typed response extraction
-  private extractResponseData(res: any): any {
+  private extractResponseData(res: Object): Object {
     const body = res;
     return body || { };
   }
