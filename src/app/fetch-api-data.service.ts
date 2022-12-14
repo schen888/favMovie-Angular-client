@@ -29,6 +29,28 @@ export class  FetchApiDataService {
       .pipe(catchError(this.handleError));
   }
 
+  //Get all movies call
+  getAllMovies(): Observable<any> {
+    const token = localStorage.getItem('token');
+    return this.http
+      .get(apiUrl + 'movies', {
+        headers: new HttpHeaders(
+        {Authorization: 'Bearer ' + token})
+      })
+      .pipe(map(this.extractResponseData),catchError(this.handleError));
+  }
+
+  //Get one specific movie
+  getOneMovie(Title: string): Observable<any> {
+    const token = localStorage.getItem('token');
+    return this.http
+      .get(`${apiUrl}movies/${Title}`, {
+        headers: new HttpHeaders(
+        {Authorization: 'Bearer ' + token})
+      })
+      .pipe(map(this.extractResponseData),catchError(this.handleError));
+  }
+
   private handleError(error: HttpErrorResponse): any {
       if (error.error instanceof ErrorEvent) {
       console.error('Some error occurred:', error.error.message);
@@ -41,17 +63,7 @@ export class  FetchApiDataService {
     'Something bad happened; please try again later.');
   }
 
-  getAllMovies(): Observable<any> {
-    const token = localStorage.getItem('token');
-    return this.http
-      .get(apiUrl + 'movies', {
-        headers: new HttpHeaders(
-        {
-          Authorization: 'Bearer ' + token,
-        })
-      })
-      .pipe(map(this.extractResponseData),catchError(this.handleError));
-  }
+  
 // Non-typed response extraction
   private extractResponseData(res: any): any {
     const body = res;
