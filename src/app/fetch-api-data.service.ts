@@ -18,7 +18,7 @@ export class FetchApiDataService {
 
  // Making the api call for the user registration endpoint (posts it to the API endpoint and returns the API's response)
   public userRegistration(userDetails: any): Observable<any> {
-    console.log(userDetails);
+    console.log('userRegistration() in service: ', userDetails);
     return this.http
       .post(apiUrl + 'users', userDetails)
       .pipe(catchError(this.handleError));
@@ -135,8 +135,7 @@ export class FetchApiDataService {
           `Error Status code ${error.status}, ` +
           `Error body is: ${error.error}`);
       }
-      return throwError(
-    'Something bad happened; please try again later.');
+      return throwError(error.error);
   }
 
   
