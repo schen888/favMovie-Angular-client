@@ -5,6 +5,8 @@ import { Observable, throwError } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 const apiUrl = 'https://favmovie-schen.herokuapp.com/';
+
+//Decorator to make this service available everywhere
 @Injectable({
   providedIn: 'root'
 })
