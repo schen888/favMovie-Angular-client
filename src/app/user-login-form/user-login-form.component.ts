@@ -30,7 +30,7 @@ export class UserLoginFormComponent {
     }, (response) => {
       //Error response
       console.log('loginUser() response2:', response);
-      this.snackBar.open(response, 'OK', {
+      this.snackBar.open(response.message, 'OK', {
         duration: 4000
       });
     });
