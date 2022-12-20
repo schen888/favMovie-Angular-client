@@ -1,0 +1,40 @@
+
+$cardBg: #212529;
+$textColor: #e7e7e7;
+$titleFontWeight: 700;
+$titleFontSize: 20px;
+$closeBtnColor: #cc5050;
+
+.genre-dialog {
+  background-color: $cardBg;
+  padding: 15px;
+  //border: solid 2px #6c757d;
+  box-shadow: 0 0 50px #6c757d !important;
+  width: 500px;
+}
+
+.genre-dialog-header {
+  justify-content: space-between;
+}
+
+.genre-dialog-title {
+  color: $textColor;
+  font-weight: $titleFontWeight;
+  font-size: $titleFontSize;
+}
+
+.genre-dialog-content {
+  color: $textColor;
+}
+
+.btn-dialog-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 0px;
+  color:$textColor;
+}
+
+.btn-dialog-close:hover {
+  color:$closeBtnColor;
+}

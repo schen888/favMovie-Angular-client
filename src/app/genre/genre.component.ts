@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-genre',
@@ -6,7 +7,11 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./genre.component.scss']
 })
 export class GenreComponent {
-  @Input() genre = {Name: '', Description: ''};
-
-  
+  constructor(
+    @Inject(MAT_DIALOG_DATA)
+    public data: {
+      Name: string;
+      Description: string;
+    }
+  ) {}
 }
