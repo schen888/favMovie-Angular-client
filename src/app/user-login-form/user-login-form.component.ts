@@ -22,11 +22,15 @@ export class UserLoginFormComponent {
   loginUser(): void {
     this.fetchApiData.userLogin(this.loginData).subscribe((response) => {
       //Success response
-     this.dialogRef.close(); // Close dialog on success
-     console.log('loginUser() response1:', response);
-     this.snackBar.open('Login successfully!', 'OK', {
+      console.log('loginUser', response);
+      localStorage.setItem('username', response.user.Username);
+      localStorage.setItem('token', response.token);
+
+      this.dialogRef.close(); // Close dialog on success
+      console.log('loginUser() response1:', response);
+      this.snackBar.open('Login successfully!', 'OK', {
         duration: 2000
-     });
+      });
     }, (response) => {
       //Error response
       console.log('loginUser() response2:', response);
