@@ -1,0 +1,31 @@
+<div>
+  <mat-card style="width: 40%">
+    <mat-card-header>
+      <mat-card-title>User Info:</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div>
+        <b>Username: </b>{{user.Username}}
+      </div>
+
+      <div>
+        <b>Email: </b>{{user.Email}}
+      </div>
+
+      <div>
+        <b>Birthday: </b>{{user.Birthday}}
+      </div>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button
+        mat-raised-button
+        color="warn"
+        (click)="onDeleteAccount(user.Username)"
+      >
+        Delete Account
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

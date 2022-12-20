@@ -73,10 +73,11 @@ export class FetchApiDataService {
       .pipe(map(this.extractResponseData),catchError(this.handleError));
   }
 
-  getUser(Username: string): Observable<any> {
+  getUser(): Observable<any> {
     const token = localStorage.getItem('token');
+    const username=localStorage.getItem('username')
     return this.http
-      .get(`${apiUrl}users/${Username}`, {
+      .get(`${apiUrl}users/${username}`, {
         headers: new HttpHeaders(
         {Authorization: 'Bearer ' + token})
       })
@@ -116,15 +117,15 @@ export class FetchApiDataService {
       .pipe(map(this.extractResponseData),catchError(this.handleError));
   }
 
-  deleteUser(): Observable<any> {
+  deleteUser(username: string): Observable<any> {
     const token = localStorage.getItem('token');
-    const username = localStorage.getItem('username');
+    //const username = localStorage.getItem('username');
     return this.http
       .delete(`${apiUrl}users/${username}`, {
         headers: new HttpHeaders(
         {Authorization: 'Bearer ' + token})
       })
-      .pipe(map(this.extractResponseData),catchError(this.handleError));
+      .pipe(catchError(this.handleError));
   }
 
   private handleError(error: HttpErrorResponse): any {
@@ -141,6 +142,7 @@ export class FetchApiDataService {
   
 // Non-typed response extraction
   private extractResponseData(res: Object): Object {
+    console.log(res);
     const body = res;
     return body || { };
   }
