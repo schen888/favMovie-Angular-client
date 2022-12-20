@@ -5,7 +5,7 @@ $closeBtnColor: #cc5050;
 $titleFontWeight: 700;
 $titleFontSize: 20px;
 
-.genre-dialog {
+.director-dialog {
   background-color: $cardBg;
   padding: 15px;
   //border: solid 2px #6c757d;
@@ -13,17 +13,17 @@ $titleFontSize: 20px;
   width: 500px;
 }
 
-.genre-dialog-header {
+.director-dialog-header {
   justify-content: space-between;
 }
 
-.genre-dialog-title {
+.director-dialog-title {
   color: $textColor;
   font-weight: $titleFontWeight;
   font-size: $titleFontSize;
 }
 
-.genre-dialog-content {
+.director-dialog-content {
   color: $textColor;
 }
 

@@ -9,6 +9,13 @@
       <button
         mat-button
         color="primary"
+      >
+        Synopsis
+      </button>
+      
+      <button
+        mat-button
+        color="primary"
         (click)="openGenreDialog(movie.Genre.Name, movie.Genre.Description)"
       >
         Genre
@@ -17,15 +24,9 @@
       <button
         mat-button
         color="primary"
+        (click)="openDirectorDialog(movie.Director.Name, movie.Director.Bio, movie.Director.Birth)"
       >
         Director
-      </button>
-
-      <button
-        mat-button
-        color="primary"
-      >
-        Synopsis
       </button>
 
       <mat-icon>favorite_border</mat-icon>

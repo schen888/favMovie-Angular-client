@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FetchApiDataService } from '../fetch-api-data.service';
-import { GenreComponent } from '../genre/genre.component';
-
 import { MatDialog } from '@angular/material/dialog';
 
-
+import { GenreComponent } from '../genre/genre.component';
+import { DirectorComponent } from '../director/director.component'
 
 @Component({
   selector: 'app-movie-card',
@@ -43,6 +42,16 @@ export class MovieCardComponent implements OnInit {
       data: {
         Name: name,
         Description: description
+      }
+    });
+  }
+
+  openDirectorDialog(name: string, bio: string, birth: string): void {
+    this.dialog.open(DirectorComponent, {
+      data: {
+        Name: name,
+        Bio: bio,
+        Birth: birth
       }
     });
   }
