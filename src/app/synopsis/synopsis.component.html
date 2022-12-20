@@ -1,0 +1,18 @@
+<mat-card class="synopsis-dialog">
+  <mat-card-header class="synopsis-dialog-header">
+    <mat-card-title class="synopsis-dialog-title">{{data.Name}}</mat-card-title>
+
+    <mat-card-actions class="synopsis-actions">
+      <button
+        class="btn-dialog-close"
+        mat-icon-button
+        aria-label="Close the synopsis details button"
+        mat-dialog-close
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card-header>
+
+  <mat-card-content class="synopsis-dialog-content">{{data.Description}}</mat-card-content>
+</mat-card>
