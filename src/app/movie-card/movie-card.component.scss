@@ -26,14 +26,13 @@ $textColor: #414141;
 
 .img-wrapper {
   width:100%;
-}
-
-.movie-img {
-  height: 480px;
-  width:100%;
   overflow: hidden;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
+}
+
+.movie-img {
+  height: 450px;
 }
 
 .movie-title {
@@ -48,10 +47,8 @@ $textColor: #414141;
   color: $textColor;
 }
 
+
 .movie-actions button {
   font-size: 14px;
-  display: flex;
-  justify-content: space-around;
-  align-self: center;
   color: $primary;
 }

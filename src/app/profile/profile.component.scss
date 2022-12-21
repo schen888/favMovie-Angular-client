@@ -1,4 +1,5 @@
 $primary: #b20000;
+$textColor: #414141;
 
 .profile-container {
   display: flex;
@@ -8,14 +9,15 @@ $primary: #b20000;
   justify-self: stretch;
 }
 
-.card {
+mat-card {
   max-width: 600px;
   margin: 30px auto;
-  padding: 30px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 10px grey;
   justify-content: space-between;
+  color:$textColor;
 }
 
 .update-form {
