@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FetchApiDataService } from '../fetch-api-data.service';
 import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';//Display notification
 
 import { GenreComponent } from '../genre/genre.component';
 import { DirectorComponent } from '../director/director.component';
@@ -14,14 +15,19 @@ import { SynopsisComponent } from '../synopsis/synopsis.component';
 export class MovieCardComponent implements OnInit {
   
   movies: any[]=[];
+  user: any={};
+  favoriteMovies: any[]=[];
 
   constructor(
     public fetchApiDataService: FetchApiDataService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public snackBar: MatSnackBar,
     ) {}
 
   ngOnInit(): void {
     this.getMovies();
+    this.getFavMovies();
+    
   }
 
   getMovies(): void {
@@ -32,12 +38,14 @@ export class MovieCardComponent implements OnInit {
     })
   }
 
-    /**
-   * Opens genre information from GenreComponent
-   * @param {string} name
-   * @param {string} description
-   * @function openGenreDialog
-   */
+  getFavMovies(): void {
+    this.fetchApiDataService.getUser().subscribe((res: any)=>{
+      this.favoriteMovies=res.FavoriteMovies;
+      console.log('getUserInfo():', res);
+      return this.favoriteMovies;
+    })
+  }
+
   openGenreDialog(name: string, description: string): void {
     this.dialog.open(GenreComponent, {
       data: {
@@ -64,5 +72,30 @@ export class MovieCardComponent implements OnInit {
         Description: description
       }
     });
+  }
+
+  onToggleFavMovie(id: string): void {
+    console.log(this.favoriteMovies);
+    if(!this.favoriteMovies.includes(id)) {
+      this.fetchApiDataService.addFavoriteMovie(id).subscribe((res)=>{
+        this.favoriteMovies=res.FavoriteMovies;
+      }, (res) => {
+        //Error response
+        console.log('loginUser() response2:', res);
+        this.snackBar.open(res.message, 'OK', {
+          duration: 4000
+        });
+      })
+    } else {
+      this.fetchApiDataService.deleteFavoriteMovie(id).subscribe((res)=>{
+        this.favoriteMovies=res.FavoriteMovies;
+      }, (res) => {
+        //Error response
+        console.log('loginUser() response2:', res);
+        this.snackBar.open(res.message, 'OK', {
+          duration: 4000
+        });
+      })
+    }
   }
 }

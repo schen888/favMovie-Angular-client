@@ -1,14 +1,13 @@
-$cardColor: rgb(56, 56, 56);
+/* $cardColor: rgb(56, 56, 56);
 $textColor: #fff;
 $directedColor: rgb(197, 197, 197);
-$boxShadowColor: #1e1e1e;
+$boxShadowColor: #1e1e1e; */
 
 .movie-list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 50px;
   margin-bottom: 25px;
 }
 
@@ -66,4 +65,9 @@ img {
   display: flex;
   justify-content: space-evenly;
   color: $directedColor;
+}
+
+.favIcon {
+  color: black;
+
 }

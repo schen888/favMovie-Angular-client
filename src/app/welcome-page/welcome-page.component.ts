@@ -12,7 +12,9 @@ import { UserLoginFormComponent } from '../user-login-form/user-login-form.compo
 export class WelcomePageComponent implements OnInit{
 
   constructor(public dialog: MatDialog) {}
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    localStorage.clear();
+  }
 
   //Open the uer registration dialog when signup button is clicked
   openUserRegistrationDialog(): void {

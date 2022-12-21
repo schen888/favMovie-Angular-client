@@ -1,0 +1,17 @@
+<style> @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap'); </style>
+
+<mat-toolbar>
+  <span class="nav-logo">
+    <a routerLink="/movies">FavMovie</a>
+  </span>
+
+  <span class="nav-profile">
+    <a mat-button routerLink="/profile">Profile</a>
+  </span>
+
+  <span class="nav-logout">
+    <a mat-button (click)="logout()" class="logout-button">
+      <mat-icon>logout</mat-icon>Logout
+    </a>
+  </span>
+</mat-toolbar>

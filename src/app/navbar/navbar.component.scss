@@ -1,0 +1,35 @@
+$textSize: 18px;
+$primary: #b20000;
+$textColor: white;
+
+.mat-toolbar {
+  display: flex;
+  height: 70px;
+  background-color: $primary;
+  color: $textColor;
+}
+
+a {
+  text-decoration: none;
+  color: $textColor;
+}
+
+.nav-logo {
+  flex: 1 1 auto;
+  font-size: 30px;
+  font-family: 'Monoton', cursive;
+}
+
+.nav-logo a:hover {
+  filter:drop-shadow(0 0 8px white);
+}
+
+.nav-profile {
+  font-size: $textSize;
+}
+
+
+.nav-logout {
+  padding-left: 30px;
+  font-size: $textSize;
+}
