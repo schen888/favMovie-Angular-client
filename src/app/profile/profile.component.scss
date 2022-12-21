@@ -1,0 +1,49 @@
+$primary: #b20000;
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 1% auto;
+  justify-self: stretch;
+}
+
+.card {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px grey;
+  justify-content: space-between;
+}
+
+.update-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card-header {
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  color: $primary;
+  margin-bottom: 36px;
+}
+
+.card-actions {
+  display: flex;
+  justify-content:center;
+  margin-top: 24px;
+}
+
+.mat-mdc-raised-button.mat-primary{
+  background-color: $primary;
+  color: white;
+}
+
+mat-label {
+  color: $primary;
+}

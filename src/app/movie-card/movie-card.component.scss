@@ -1,73 +1,57 @@
-/* $cardColor: rgb(56, 56, 56);
-$textColor: #fff;
-$directedColor: rgb(197, 197, 197);
-$boxShadowColor: #1e1e1e; */
+$primary: #b20000;
+$textColor: #414141;
 
+.container {
+  display: flex;
+}
 .movie-list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 25px;
+  width: 100%;
+  margin-top: 10px;
 }
 
-.mat-card {
+.movie-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   position: relative;
-  box-shadow: 0 25px 30px $boxShadowColor;
-  background-color: $cardColor;
-  margin: 25px;
-  padding: 20px 3px;
+  margin:10px;
   max-width: 300px;
+  box-shadow: 0 0 20px grey;
 }
 
-.mat-card-header {
-  height: 90px;
-  display: flex;
-  align-items: center;
+.img-wrapper {
+  width:100%;
+}
+
+.movie-img {
+  height: 480px;
+  width:100%;
+  overflow: hidden;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.movie-title {
+  align-self: start;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  font-style: oblique;
+  justify-self: flex-start;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-weight: 500;
   color: $textColor;
 }
 
-.mat-card-title {
-  /* display: flex;
-  max-width: 210px;
-  justify-content: center;
-  text-align: center; */
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-}
-
-.mat-card-subtitle {
-  color: $directedColor;
+.movie-actions button {
+  font-size: 14px;
   display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-img {
-  max-width: 300px;
-  object-fit: contain;
-}
-
-.mat-icon-button {
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  color: crimson;
-}
-
-.mat-card > .mat-card-actions {
-  margin-left: 0;
-  padding-bottom: 0;
-  display: flex;
-  justify-content: space-evenly;
-  color: $directedColor;
-}
-
-.favIcon {
-  color: black;
-
+  justify-content: space-around;
+  align-self: center;
+  color: $primary;
 }

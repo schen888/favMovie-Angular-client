@@ -1,0 +1,46 @@
+$primary: #b20000;
+$secondary: #6f0000;
+
+* {
+  box-sizing: border-box;
+}
+
+.welcome-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 40px;
+  background-color: $secondary;
+}
+
+.welcome-card {
+  max-width: 500px;
+  margin: 25vh auto auto auto;
+  padding: 30px;
+  flex-direction: column;
+  box-shadow: 0 0 10px grey;
+  justify-content: space-evenly;
+}
+
+.welcome-card-header {
+  font-family: 'Monoton', cursive;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 500;
+  color:#b20000;
+}
+
+mat-card > mat-card-actions:last-child {
+  margin-left: 0;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.mat-mdc-raised-button.mat-primary{
+  background-color: $primary;
+  color: white;
+}

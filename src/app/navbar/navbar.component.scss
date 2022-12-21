@@ -14,14 +14,15 @@ a {
   color: $textColor;
 }
 
+a:hover {
+  filter:drop-shadow(0 0 8px white);
+}
+
+
 .nav-logo {
   flex: 1 1 auto;
   font-size: 30px;
   font-family: 'Monoton', cursive;
-}
-
-.nav-logo a:hover {
-  filter:drop-shadow(0 0 8px white);
 }
 
 .nav-profile {

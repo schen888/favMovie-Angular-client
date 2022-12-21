@@ -1,14 +1,16 @@
 <app-navbar></app-navbar>
+<div class="container">
 <div class="movie-list">
-  <mat-card *ngFor="let movie of movies; let i=index;">
-    <img src={{movie.imageURL}} alt= {{movie.Title}}>
-    <mat-card-header>
+  <mat-card class="movie-card" *ngFor="let movie of movies; let i=index;">
+    <div class="img-wrapper">
+    <img class="movie-img" src={{movie.imageURL}} alt= {{movie.Title}}>
+  </div>
+    <mat-card-header class="movie-title">
       <mat-card-title>{{movie.Title}}</mat-card-title>
     </mat-card-header>
-    <mat-card-actions>
+    <mat-card-actions class="movie-actions">
       <button
         mat-button
-        color="primary"
         (click)="openSynopsisDialog(movie.Title, movie.Description)"
       >
         Synopsis
@@ -38,5 +40,7 @@
         <mat-icon class="favIcon">{{favoriteMovies.includes(movie._id) ? 'favorite' : 'favorite_border'}}</mat-icon>
       </button>
     </mat-card-actions>
+  
   </mat-card>
+</div>
 </div>
