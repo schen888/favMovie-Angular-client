@@ -1,0 +1,40 @@
+$primary: #b20000;
+$secondary: #6f0000;
+$textColor: #414141;
+
+
+mat-card {
+  max-width: 500px;
+  margin: auto;
+  padding: 18px;
+  flex-direction: column;
+  box-shadow: 0 0 30px grey;
+  justify-content: space-evenly;
+}
+
+mat-card-header {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  color: $primary;
+  font-size: 24px;
+}
+
+mat-label {
+  color: $primary;
+}
+
+input.mat-mdc-input-element, .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+  color: $textColor !important;
+}
+
+mat-card-actions {
+  padding-left: 18px;
+  display: flex;
+  justify-content: left;
+}
+
+.mat-mdc-raised-button.mat-primary{
+  background-color: $primary;
+  color: white;
+}
