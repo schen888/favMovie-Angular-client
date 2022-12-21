@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FetchApiDataService } from '../fetch-api-data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
 export class ProfileComponent implements OnInit{
 
   user: any={}
+
+  @Input() userUpdateData = { Username: '', Password: '', Email: '', Birthday: '' };//Decorator
 
   constructor(
     public fetchApiDataService: FetchApiDataService,
@@ -47,5 +49,22 @@ export class ProfileComponent implements OnInit{
     this.fetchApiDataService.deleteUser(username).subscribe(res=>{
       console.log(res);
     })
+  }
+
+  onUserUpdate(): void {
+    this.fetchApiDataService.editUser(this.userUpdateData).subscribe((response) => {
+      // Logic for a successful user registration goes here! (To be implemented)
+      localStorage.setItem('username', response.Username);
+      this.snackBar.open('Your profile is updated successfully!', 'OK', {
+        duration: 4000
+      });
+      window.location.reload();
+    }, (response) => {
+      //Error response
+      console.log('onUserUpdate() response2:', response);
+      this.snackBar.open(response.errors[0].msg, 'OK', {
+        duration: 6000
+      });
+    });
   }
 }
