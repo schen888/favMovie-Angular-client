@@ -27,8 +27,12 @@ a:hover {
 
 .nav-profile {
   font-size: $textSize;
+  margin-top: 1px;
 }
 
+.icon-profile {
+  margin-top: 5px;
+}
 
 .nav-logout {
   padding-left: 3%;

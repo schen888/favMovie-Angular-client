@@ -1,5 +1,6 @@
 $primary: #b20000;
 $secondary: #6f0000;
+$btnColor: #252525;
 
 * {
   box-sizing: border-box;
@@ -19,7 +20,7 @@ $secondary: #6f0000;
   margin: 25vh auto auto auto;
   padding: 30px;
   flex-direction: column;
-  box-shadow: 0 0 10px grey;
+  box-shadow: 0 0 20px 1px white;
   justify-content: space-evenly;
 }
 
@@ -30,7 +31,7 @@ $secondary: #6f0000;
   justify-content: center;
   font-size: 28px;
   font-weight: 500;
-  color:#b20000;
+  color:$primary;
 }
 
 mat-card > mat-card-actions:last-child {
@@ -41,6 +42,6 @@ mat-card > mat-card-actions:last-child {
 }
 
 .mat-mdc-raised-button.mat-primary{
-  background-color: $primary;
+  background-color: $btnColor;
   color: white;
 }

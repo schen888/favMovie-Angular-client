@@ -1,11 +1,14 @@
 $primary: #b20000;
+$secondary: #6f0000;
 $textColor: #414141;
+$btnColor: #252525;
 
 .profile-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
   max-width: 1200px;
-  margin: 1% auto;
+  margin: 3% auto;
   justify-self: stretch;
 }
 
@@ -26,7 +29,7 @@ mat-card {
   justify-content: space-around;
 }
 
-.card-header {
+mat-card-header {
   font-size: 20px;
   font-weight: 500;
   display: flex;
@@ -42,10 +45,15 @@ mat-card {
 }
 
 .mat-mdc-raised-button.mat-primary{
+  background-color: $btnColor;
+  color: white;
+}
+
+.mat-mdc-raised-button.mat-warn{
   background-color: $primary;
   color: white;
 }
 
 mat-label {
-  color: $primary;
+  color: $textColor;
 }

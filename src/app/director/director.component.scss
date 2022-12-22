@@ -1,4 +1,6 @@
+$primary: #b20000;
 $secondary: #6f0000;
+$btnColor: #252525;
 $cardBg: $secondary;
 $textColor: #e9e9e9;
 $closeBtnColor: #cc5050;
@@ -9,8 +11,6 @@ $titleFontSize: 20px;
 .director-dialog {
   background-color: $cardBg;
   padding: 15px;
-  //border: solid 2px #6c757d;
-  box-shadow: 0 0 50px #6c757d !important;
   width: 500px;
 }
 

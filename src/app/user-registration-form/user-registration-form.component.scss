@@ -1,6 +1,7 @@
 $primary: #b20000;
 $secondary: #6f0000;
 $textColor: #414141;
+$btnColor: #252525;
 
 
 mat-card {
@@ -21,7 +22,7 @@ mat-card-header {
 }
 
 mat-label {
-  color: $primary;
+  color: $textColor;
 }
 
 input.mat-mdc-input-element, .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
@@ -35,6 +36,6 @@ mat-card-actions {
 }
 
 .mat-mdc-raised-button.mat-primary{
-  background-color: $primary;
+  background-color: $btnColor;
   color: white;
 }
