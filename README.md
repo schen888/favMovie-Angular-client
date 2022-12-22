@@ -31,5 +31,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## App showcase
 <img alt="A screenshot of the welcome-page in FavMovie App" src="/img/Screenshot1.png" width="100%">
-<img alt="A screenshot of the movie-page in FavMovie App" src="/img/Screenshot4.png" width="90%">
-<img alt="A screenshot of the profile-page in FavMovie App" src="/img/Screenshot3.png" width="80%">
+<img alt="A screenshot of the movie-page in FavMovie App" src="/img/Screenshot4.png" width="100%">
+<img alt="A screenshot of the profile-page in FavMovie App" src="/img/Screenshot3.png" width="100%">
