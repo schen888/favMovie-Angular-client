@@ -30,7 +30,7 @@ export class ProfileComponent implements OnInit{
         ...res,
         Birthday: new Date(res.Birthday).toLocaleDateString()
       };
-      console.log('getUserInfo():', this.user);
+      //console.log('getUserInfo():', this.user);
       return this.user;
     })
   }
@@ -47,7 +47,7 @@ export class ProfileComponent implements OnInit{
     }
 
     this.fetchApiDataService.deleteUser(username).subscribe(res=>{
-      console.log(res);
+      console.log('deleteAccountRes:', res);
     })
   }
 
@@ -61,7 +61,7 @@ export class ProfileComponent implements OnInit{
       window.location.reload();
     }, (response) => {
       //Error response
-      console.log('onUserUpdate() response2:', response);
+      //console.log('onUserUpdate() response2:', response);
       this.snackBar.open(response.errors[0].msg, 'OK', {
         duration: 6000
       });

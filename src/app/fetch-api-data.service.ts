@@ -18,7 +18,7 @@ export class FetchApiDataService {
 
  // Making the api call for the user registration endpoint (posts it to the API endpoint and returns the API's response)
   public userRegistration(userDetails: any): Observable<any> {
-    console.log('userRegistration() in service: ', userDetails);
+    //console.log('userRegistration() in service: ', userDetails);
     return this.http
       .post(apiUrl + 'users', userDetails)
       .pipe(catchError(this.handleError));
@@ -145,7 +145,7 @@ export class FetchApiDataService {
   
 // Non-typed response extraction
   private extractResponseData(res: Object): Object {
-    console.log(res);
+    //console.log(res);
     const body = res;
     return body || { };
   }

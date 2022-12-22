@@ -33,7 +33,7 @@ export class MovieCardComponent implements OnInit {
   getMovies(): void {
     this.fetchApiDataService.getAllMovies().subscribe((res: any)=>{
       this.movies=res;
-      console.log('getMovies():', this.movies);
+      //console.log('getMovies():', this.movies);
       return this.movies;
     })
   }
@@ -41,7 +41,7 @@ export class MovieCardComponent implements OnInit {
   getFavMovies(): void {
     this.fetchApiDataService.getUser().subscribe((res: any)=>{
       this.favoriteMovies=res.FavoriteMovies;
-      console.log('getUserInfo():', res);
+      //console.log('getFavMovies():', res.FavoriteMovies);
       return this.favoriteMovies;
     })
   }
@@ -75,13 +75,13 @@ export class MovieCardComponent implements OnInit {
   }
 
   onToggleFavMovie(id: string): void {
-    console.log(this.favoriteMovies);
+    //console.log(this.favoriteMovies);
     if(!this.favoriteMovies.includes(id)) {
       this.fetchApiDataService.addFavoriteMovie(id).subscribe((res)=>{
         this.favoriteMovies=res.FavoriteMovies;
       }, (res) => {
         //Error response
-        console.log('loginUser() response2:', res);
+        //console.log('loginUser() response2:', res);
         this.snackBar.open(res.message, 'OK', {
           duration: 4000
         });
@@ -91,7 +91,7 @@ export class MovieCardComponent implements OnInit {
         this.favoriteMovies=res.FavoriteMovies;
       }, (res) => {
         //Error response
-        console.log('loginUser() response2:', res);
+        //console.log('loginUser() response2:', res);
         this.snackBar.open(res.message, 'OK', {
           duration: 4000
         });
