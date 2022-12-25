@@ -39,8 +39,8 @@ $textColor: #414141;
   word-wrap: break-word;
   font-style: oblique;
   justify-self: flex-start;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 11%;
+  padding-right: 11%;
   font-weight: 500;
   color: $textColor;
 }
@@ -57,11 +57,11 @@ $textColor: #414141;
   }
 
   .movie-card {
-    max-width: 280px;
+    max-width: 250px;
   }
 
   .movie-img {
-    height: 400px;
+    height: 380px;
   }
 }
 
@@ -71,7 +71,7 @@ $textColor: #414141;
   }
 
   .movie-card {
-    max-width: 500px;
+    max-width: 300px;
   }
 }
 
