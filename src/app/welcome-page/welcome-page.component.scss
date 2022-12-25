@@ -84,6 +84,7 @@ button:first-child {
 
 @media all and (min-width: 500px) {
   .welcome-card{
+    width:90%;
     max-width: 420x;
     aspect-ratio: 2/1;
   }
@@ -91,14 +92,3 @@ button:first-child {
     font-size: 28px;
   }
 }
-
-/* @media all and (min-width: 1000px) {
-  .welcome-card{
-    width:%;
-    max-width: 400px;
-    aspect-ratio: 2/1;
-  }
-  .welcome-card-header {
-    font-size: 28px;
-  }
-} */
