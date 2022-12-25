@@ -63,8 +63,8 @@ button:first-child {
 @media all and (min-width: 325px) and (max-width: 365px) {
   .welcome-card{
     width: 95%;
-    max-width: 300px;
-    aspect-ratio: 1.5/1;
+    max-width: 280px;
+    aspect-ratio: 1.8/1;
   }
   .welcome-card-header {
     font-size: 18px;
@@ -74,32 +74,31 @@ button:first-child {
 @media all and (min-width: 365px) and (max-width: 500px) {
   .welcome-card{
     width: 95%;
-    max-width: 380px;
-    aspect-ratio: 1.5/1;
+    max-width: 350px;
+    aspect-ratio: 1.8/1;
   }
   .welcome-card-header {
     font-size: 22px;
   }
 }
 
-@media all and (min-width: 500px) and (max-width: 1000px) {
+@media all and (min-width: 500px) {
   .welcome-card{
-    width: 90%;
-    max-width: 450px;
-    aspect-ratio: 1.8/1;
+    max-width: 420x;
+    aspect-ratio: 2/1;
   }
   .welcome-card-header {
     font-size: 28px;
   }
 }
 
-@media all and (min-width: 1000px) {
+/* @media all and (min-width: 1000px) {
   .welcome-card{
-    width:80%;
-    max-width: 500px;
-    aspect-ratio: 1.8/1;
+    width:%;
+    max-width: 400px;
+    aspect-ratio: 2/1;
   }
   .welcome-card-header {
-    font-size: 32px;
+    font-size: 28px;
   }
-}
+} */
