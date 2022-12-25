@@ -34,11 +34,13 @@ $btnColor: #252525;
   color:$primary;
 }
 
-mat-card > mat-card-actions:last-child {
-  margin-left: 0;
-  padding-bottom: 0;
+.welcome-card-actions {
   display: flex;
   justify-content: space-evenly;
+}
+
+button:first-child {
+  margin-left: 3%;
 }
 
 .mat-mdc-raised-button.mat-primary{
