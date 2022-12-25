@@ -11,7 +11,7 @@ $btnColor: #252525;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 40px;
+  padding: 3% 3%;
   background-color: $secondary;
 }
 
@@ -47,11 +47,12 @@ button:first-child {
 
 @media all and (max-width: 325px) {
   .welcome-card{
+    width: 95%;
     max-width: 250px;
     aspect-ratio: 1.5/1;
   }
   .welcome-card-header {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   button > .btn-icon {
@@ -59,18 +60,9 @@ button:first-child {
   }
 }
 
-@media all and (min-width: 325px) and (max-width: 360px) {
+@media all and (min-width: 325px) and (max-width: 365px) {
   .welcome-card{
-    max-width: 300px;
-    aspect-ratio: 1.5/1;
-  }
-  .welcome-card-header {
-    font-size: 16px;
-  }
-}
-
-@media all and (min-width: 360px) and (max-width: 500px) {
-  .welcome-card{
+    width: 95%;
     max-width: 300px;
     aspect-ratio: 1.5/1;
   }
@@ -79,9 +71,21 @@ button:first-child {
   }
 }
 
+@media all and (min-width: 365px) and (max-width: 500px) {
+  .welcome-card{
+    width: 95%;
+    max-width: 380px;
+    aspect-ratio: 1.5/1;
+  }
+  .welcome-card-header {
+    font-size: 22px;
+  }
+}
+
 @media all and (min-width: 500px) and (max-width: 1000px) {
   .welcome-card{
-    max-width: 480px;
+    width: 90%;
+    max-width: 450px;
     aspect-ratio: 1.8/1;
   }
   .welcome-card-header {
@@ -91,10 +95,11 @@ button:first-child {
 
 @media all and (min-width: 1000px) {
   .welcome-card{
+    width:80%;
     max-width: 500px;
     aspect-ratio: 1.8/1;
   }
   .welcome-card-header {
-    font-size: 28px;
+    font-size: 32px;
   }
 }
