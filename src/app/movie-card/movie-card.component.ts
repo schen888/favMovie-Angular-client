@@ -79,6 +79,9 @@ export class MovieCardComponent implements OnInit {
     if(!this.favoriteMovies.includes(id)) {
       this.fetchApiDataService.addFavoriteMovie(id).subscribe((res)=>{
         this.favoriteMovies=res.FavoriteMovies;
+        this.snackBar.open('Movie added to favourites.', 'OK', {
+          duration: 3000
+       })
       }, (res) => {
         //Error response
         //console.log('loginUser() response2:', res);
@@ -89,6 +92,9 @@ export class MovieCardComponent implements OnInit {
     } else {
       this.fetchApiDataService.deleteFavoriteMovie(id).subscribe((res)=>{
         this.favoriteMovies=res.FavoriteMovies;
+        this.snackBar.open('Movie removed from favourites.', 'OK', {
+          duration: 3000
+       })
       }, (res) => {
         //Error response
         //console.log('loginUser() response2:', res);
