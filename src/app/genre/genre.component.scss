@@ -3,15 +3,12 @@ $cardBg: $secondary;
 $textColor: #e9e9e9;
 $closeBtnColor: #cc5050;
 
-$titleFontWeight: 700;
-$titleFontSize: 20px;
+$titleFontWeight: 600;
 
 .genre-dialog {
   background-color: $cardBg;
-  padding: 15px;
-  //border: solid 2px #6c757d;
-  box-shadow: 0 0 50px #6c757d !important;
-  width: 500px;
+  padding: 3%;
+  max-width: 400px;
 }
 
 .genre-dialog-header {
@@ -21,7 +18,6 @@ $titleFontSize: 20px;
 .genre-dialog-title {
   color: $textColor;
   font-weight: $titleFontWeight;
-  font-size: $titleFontSize;
 }
 
 .genre-dialog-content {
