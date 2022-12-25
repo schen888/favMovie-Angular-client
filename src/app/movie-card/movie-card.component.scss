@@ -10,7 +10,6 @@ $textColor: #414141;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  margin-top: 10px;
 }
 
 .movie-card {
@@ -20,7 +19,6 @@ $textColor: #414141;
   align-items: center;
   position: relative;
   margin:10px;
-  max-width: 300px;
   box-shadow: 0 0 20px grey;
 }
 
@@ -51,4 +49,48 @@ $textColor: #414141;
 .movie-actions button {
   font-size: 14px;
   color: $primary;
+}
+
+@media all and (max-width: 300px) {
+  .movie-list {
+    margin-top: 50px;
+  }
+
+  .movie-card {
+    max-width: 280px;
+  }
+
+  .movie-img {
+    height: 400px;
+  }
+}
+
+@media all and (min-width: 300px) and (max-width: 500px) {
+  .movie-list {
+    margin-top: 60px;
+  }
+
+  .movie-card {
+    max-width: 500px;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 1000px) {
+  .movie-list {
+    margin-top: 70px;
+  }
+
+  .movie-card {
+    max-width: 300px;
+  }
+}
+
+@media all and (min-width: 1000px) {
+  .movie-list {
+    margin-top: 75px;
+  }
+
+  .movie-card {
+    max-width: 300px;
+  }
 }
