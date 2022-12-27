@@ -24,6 +24,11 @@ export class ProfileComponent implements OnInit{
     this.getUserInfo();
   }
 
+  /**
+   * Make API call to get user info, change the format of 'Birthday' property of localDateString
+   * and set the uer variable to the user object
+   * @returns object with user information
+   */
   getUserInfo(): void {
     this.fetchApiDataService.getUser().subscribe((res: any)=>{
       this.user={
@@ -35,6 +40,12 @@ export class ProfileComponent implements OnInit{
     })
   }
 
+  /**
+   * Log out the user
+   * 
+   * @remarks
+   * Make API call to delete the user, navigate of welcome-page and remove user info from localStorage
+   */
   onDeleteAccount(username: string): void {
     if (confirm('Are you sure you want to delete your account? This action cannnot be undone.')) {
       this.router.navigate(['welcome']).then(() => {
@@ -51,6 +62,12 @@ export class ProfileComponent implements OnInit{
     })
   }
 
+  /**
+   * Update user info
+   * 
+   * @remarks
+   * Make API call to update the user, reset the localstorage and reload the profile-page
+   */
   onUserUpdate(): void {
     this.fetchApiDataService.editUser(this.userUpdateData).subscribe((response) => {
       // Logic for a successful user registration goes here! (To be implemented)

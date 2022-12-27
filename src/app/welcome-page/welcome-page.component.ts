@@ -16,7 +16,9 @@ export class WelcomePageComponent implements OnInit{
     localStorage.clear();
   }
 
-  //Open the uer registration dialog when signup button is clicked
+  /**
+   * Open the uer registration dialog when sign up button is clicked
+   */
   openUserRegistrationDialog(): void {
     this.dialog.open(UserRegistrationFormComponent, {
     // Assigning the dialog a width
@@ -24,11 +26,13 @@ export class WelcomePageComponent implements OnInit{
     });
   }
 
+  /**
+   * Open the uer login dialog when login button is clicked
+   */
   openUserLoginDialog(): void {
     this.dialog.open(UserLoginFormComponent, {
     // Assigning the dialog a width
     width: '280px'
     });
   }
-
 }

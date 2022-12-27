@@ -19,7 +19,15 @@ export class UserRegistrationFormComponent implements OnInit {
     public snackBar: MatSnackBar) { }
 
   ngOnInit(): void {} //OnInit method
+  
 
+  /**
+   * register a new user
+   * 
+   * @remarks
+   * Make API call to register the user, if success, open snackBar to inform and close the login dialog,
+   * if fail, open snackBar to show error message
+   */
   registerUser(): void {
     this.fetchApiData.userRegistration(this.userData).subscribe((response) => {
   // Logic for a successful user registration goes here! (To be implemented)
