@@ -11,7 +11,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - User can add/remove each movie into/from the favorite movies list by clicking the heart-shaped button.
 - User can navigate to the profile view through navbar. In profile view, user can view and update the profile info and delete account.
 
-## Technoligies used
+## Technologies used
 TypeScript, Angular, TypeDoc
 
 ## Deployed application
